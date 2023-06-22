@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" />
+    <style>
+        .responsive-box {
+            max-width: 100%;
+            min-width: 400px;
+        }
+
+        /* Medium devices (tablets, 768px and up) */
+        @media (max-width: 768px) {
+            .responsive-box {
+                width: calc(100vw - 2em);
+                min-width: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div style="display: flex;justify-content: center;align-items: center;gap: 1em;margin-top: 3em;">
+            <img src="https://vikrammali.github.io/slack_clone/img/chat.png" style="width: 60px; height: 60px;" />
+            <h1>Work Setu</h1>
+        </div>
+        <div style="display: flex;align-items: center;flex-wrap: wrap;gap: 1em;">
+            <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
+                <div class="responsive-box">
+                    <h2 style="text-align: center;">Create a new workspace</h2>
+                    <p style="text-align: center;"> Find your workspace as your own way!</p>
+                    <a class="button" href="step1.html"> Create a workspace</a>
+                    <p style="text-align: center;">OR</p>
+                    <a class="button" href="otp.html"> Join workspace</a>
+                </div>
+            </div>
+            <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
+                <img class="responsive-box"
+                    src="workplace.webp" />
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
