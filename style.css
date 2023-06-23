@@ -122,3 +122,23 @@ img{
         max-width: calc(100% - 2em);
     }
 }
+
+
+/* Dark mode button css */
+.dark-mode-toggle {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.dark-mode{
+    align-items: center;
+}
+.dark-mode-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    transition: 0.1s;
+}
