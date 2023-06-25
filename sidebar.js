@@ -4,12 +4,10 @@ let isMenuOpen = false;
 
 menu.addEventListener("click", () => {
     if (isMenuOpen) {
-        sideBar.style.marginLeft = "-100%";
-
+        sideBar.style.display = "none";
         isMenuOpen = false;
     } else {
-        sideBar.style.marginLeft = "0";
-
+        sideBar.style.display = "block";
         isMenuOpen = true;
     }
 });
