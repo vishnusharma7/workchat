@@ -141,10 +141,7 @@ img {
 
 /* Main class */
 .container1 {
-
-    max-width: 1600px;
-
-    height: 95vh;
+    height: calc(100vh - 48.8px);
     display: flex;
 }
 
@@ -193,14 +190,28 @@ span {
     gap: 1em;
 }
 
+.message-container {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.sidebar {
+    padding: 0.5em;
+    flex: 1;
+    background-color: var(--bg-color);
+    min-width: 200px;
+    border-top: 0.05px solid var(--border-color);
+    border-right: 0.05px solid var(--border-color);
+}
+
 @media (max-width: 768px) {
     .sidebar {
-
         display: none;
         position: absolute;
         height: 91.5vh;
         animation: showSidebar 0.3s ease forwards;
     }
+
     @keyframes showSidebar {
         0% {
             display: none;
@@ -214,6 +225,7 @@ span {
             transform: translateX(0);
         }
     }
+
     .chat-content {
 
         margin-left: auto;
@@ -221,8 +233,8 @@ span {
         max-width: calc(100% - 2em);
 
     }
-    .menu-sidebar {
 
+    .menu-sidebar {
         display: block;
     }
 }

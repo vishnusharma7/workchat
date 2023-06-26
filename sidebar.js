@@ -11,13 +11,5 @@ menu.addEventListener("click", () => {
         isMenuOpen = true;
     }
 });
-function handleViewportChange() {
-    if (window.innerWidth > 768) {
-        menu.style.display = "none";
-    } else {
-        menu.style.display = "block";
-    }
-}
-
 window.addEventListener("resize", handleViewportChange);
 window.addEventListener("DOMContentLoaded", handleViewportChange);
