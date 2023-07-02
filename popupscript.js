@@ -1,6 +1,6 @@
-// Get the elements
 const workDetail = document.querySelector('.work-detail');
-const popupContainer = document.querySelector('.popup-container');
+const popupContainer = document.querySelector('.workspace-detail');
+const cancelButton = document.querySelector('.button[data-action="cancel"]');
 const dimmedBackground = document.createElement('div');
 dimmedBackground.classList.add('dimmed-background');
 
@@ -10,22 +10,26 @@ workDetail.addEventListener('click', () => {
     document.body.appendChild(dimmedBackground);
 });
 
-// Hide the popup and remove the dimmed background
+// Hide the popup 
 function hidePopup() {
     popupContainer.style.display = 'none';
     document.body.removeChild(dimmedBackground);
 }
 
-// Hide the popup and remove the dimmed background when clicked outside
+//when clicked outside
 window.addEventListener('click', (event) => {
     if (event.target !== workDetail && !popupContainer.contains(event.target)) {
         hidePopup();
     }
 });
 
-// Hide the popup and remove the dimmed background when the escape key is pressed
+// Hide  when the escape key is pressed
 window.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
         hidePopup();
     }
+});
+//hide when click button clicked
+cancelButton.addEventListener('click', () => {
+    hidePopup();
 });
